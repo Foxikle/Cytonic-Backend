@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  <title>Welcome</title>
+</head>
+<body>
+<h1>Welcome to CytonicMC, <%= @user.name %>!</h1>
+<p>
+  You have successfully signed up to CytonicMC,
+  your username is: <%= @user.login %>.<br>
+</p>
+<p>
+  Before you can log in, you must verify your account. To do so, click this link: <%= @url %>.
+</p>
+<p>Thanks for joining and have a great day!</p>
+<p>Note: We won't email you again unless it pertains to your account.</p>
+</body>
+</html>
