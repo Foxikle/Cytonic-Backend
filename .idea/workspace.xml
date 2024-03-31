@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a462072a-bf69-4ea6-a2f7-1276a938f863" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/controllers/admin/users_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/migrate/20240330212316_add_roles_to_users.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/foxikle_backend.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/users/usernames_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users/usernames_controller.rb" afterDir="false" />
+    <list default="true" id="a462072a-bf69-4ea6-a2f7-1276a938f863" name="Changes" comment="Add controller for managing users">
       <change beforePath="$PROJECT_DIR$/app/serializers/user_serializer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/serializers/user_serializer.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
@@ -159,12 +151,79 @@
       <option name="presentableId" value="Default" />
       <updated>1711835627102</updated>
       <workItem from="1711835630248" duration="3914000" />
-      <workItem from="1711879348761" duration="3093000" />
+      <workItem from="1711879348761" duration="3284000" />
     </task>
+    <task id="LOCAL-00001" summary="Misc stuff">
+      <option name="closed" value="true" />
+      <created>1711903096116</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1711903096116</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add roles">
+      <option name="closed" value="true" />
+      <created>1711903111740</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1711903111740</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add MC link">
+      <option name="closed" value="true" />
+      <created>1711903123094</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1711903123094</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Roles controller">
+      <option name="closed" value="true" />
+      <created>1711903133887</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1711903133887</updated>
+    </task>
+    <task id="LOCAL-00005" summary="more stuff">
+      <option name="closed" value="true" />
+      <created>1711903172051</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1711903172051</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Remove debug message">
+      <option name="closed" value="true" />
+      <created>1711903189851</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1711903189851</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Add controller for managing users">
+      <option name="closed" value="true" />
+      <created>1711903209221</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1711903209221</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Misc stuff" />
+    <MESSAGE value="Add roles" />
+    <MESSAGE value="Add MC link" />
+    <MESSAGE value="Roles controller" />
+    <MESSAGE value="more stuff" />
+    <MESSAGE value="Remove debug message" />
+    <MESSAGE value="Add controller for managing users" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add controller for managing users" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Cytonic_Backend@Cytonic_Backend.rcov" NAME="Cytonic_Backend Coverage Results" MODIFIED="1711882770043" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Cytonic_Backend" />
