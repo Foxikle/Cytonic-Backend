@@ -11,5 +11,10 @@ Rails.application.routes.draw do
     confirmations: 'users/confirmations',
   }
 
+  # Editing / user panel
   patch '/usernames/edit', to: 'users/usernames#update'
+
+  # Admin stuff
+  patch '/admin/roles', to: 'admin/roles#set_user_role'
+  get '/admin/users', to: 'admin/users#list_users'
 end
