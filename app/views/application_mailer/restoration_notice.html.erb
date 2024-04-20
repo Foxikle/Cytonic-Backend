@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Account Restoration Notice</title>
+  <style>
+      body {
+          font-family: Arial, sans-serif;
+          background-color: #f4f4f4;
+          padding: 20px;
+      }
+
+      .container {
+          max-width: 600px;
+          margin: 0 auto;
+          background-color: #ffffff;
+          padding: 20px;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+          color: #333333;
+      }
+
+      p {
+          color: #666666;
+          margin-bottom: 15px;
+      }
+
+      .signature {
+          margin-top: 30px;
+          color: #999999;
+      }
+      .reason {
+          background-color: #ffeeba;
+          padding: 10px;
+          border-radius: 6px;
+      }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>Hello <%= @resource.name %>,</h1>
+
+  <p>
+    Your account with CytonicMC has been restored.
+    Please be advised that all data associated with your account has not been deleted.
+    You may log in again at <a href="http://localhost:5173/auth/login"> the login page</a>.
+  </p>
+
+  <p class="signature">Sincerely,<br>
+    The CytonicMC Admin Team</p>
+</div>
+</body>
+</html>
