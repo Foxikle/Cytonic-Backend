@@ -4,10 +4,52 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a462072a-bf69-4ea6-a2f7-1276a938f863" name="Changes" comment="Add controller for managing users">
+    <list default="true" id="a462072a-bf69-4ea6-a2f7-1276a938f863" name="Changes" comment="Add stuff for new controllers">
+      <change afterPath="$PROJECT_DIR$/app/controllers/banners_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/reports/chat_reports_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/banner.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/chat_report.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/serializers/report_serializer.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20240331164216_create_active_storage_tables.active_storage.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20240331172131_add_avatar_url.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20240331173510_remove_avatars.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20240331174709_add_avatar_url_again.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20240331183005_rename_avatar_col.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20240403214509_add_terminated_column.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20240404000427_add_termination_date_and_reason.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20240404133803_create_chat_reports.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20240420003955_create_banners.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ec70ac5b-3891-4e85-b9c9-607eec003587.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ec70ac5b-3891-4e85-b9c9-607eec003587.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/admin/roles_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/admin/roles_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/admin/users_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/admin/users_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/users/sessions_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users/sessions_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/mailers/application_mailer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/mailers/application_mailer.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/serializers/user_serializer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/serializers/user_serializer.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/credentials.yml.enc" beforeDir="false" afterPath="$PROJECT_DIR$/config/credentials.yml.enc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/environments/development.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/development.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/environments/production.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/production.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/puma.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/puma.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/channels/application_cable/connection_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/controllers/.keep" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users/avatars_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/controllers/pages_controller_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/controllers/role_controller_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/controllers/usernames_controller_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/fixtures/files/.keep" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/application_mailer/restoration_notice.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/fixtures/users.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/banners.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/integration/.keep" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/application_mailer/termination_notice.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/mailers/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/mailers/previews/user_mailer_preview.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/mailers/user_mailer_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/banners_controller_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/models/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/models/user_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/banner_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_helper.rb" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +66,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Foxikle&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Foxikle/Cytonic-Backend.git&quot;,
+    &quot;accountId&quot;: &quot;6f838815-b3ec-4c6c-922b-fbd52623adf0&quot;
+  }
+}</component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -39,27 +93,57 @@
   &quot;associatedIndex&quot;: 4
 }</component>
   <component name="ProjectId" id="2eQT6NGP60t5PNQrEZgRazYg20k" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Rails.Cytonic_Backend.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/usr/bin/ruby&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ruby.structure.view.model.defaults.configured&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Rails.Cytonic API (PROD).executor": "Run",
+    "Rails.Cytonic_Backend.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/usr/bin/ruby",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ruby.structure.view.model.defaults.configured": "true",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Rails.Cytonic_Backend">
+    <configuration name="Cytonic API (PROD)" type="RailsRunConfigurationType" factoryName="Rails">
+      <module name="Cytonic_Backend" />
+      <predefined_log_file enabled="true" id="RUBY_RAILS_SERVER" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" ENABLE_BRANCH_COVERAGE="true" ENABLE_FORKED_COVERAGE="true">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="127.0.0.1" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="default" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="production" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
+      <method v="2" />
+    </configuration>
     <configuration name="Cytonic_Backend" type="RailsRunConfigurationType" factoryName="Rails">
       <module name="Cytonic_Backend" />
       <predefined_log_file enabled="true" id="RUBY_RAILS_SERVER" />
@@ -137,9 +221,17 @@
     </configuration>
     <list>
       <item itemvalue="Rails.Cytonic_Backend" />
+      <item itemvalue="Rails.Cytonic API (PROD)" />
       <item itemvalue="Rake.spec: Cytonic_Backend" />
       <item itemvalue="Rake.test: Cytonic_Backend" />
     </list>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-RM-241.14494.234" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SpringUtil" SPRING_PRE_LOADER_OPTION="true" RAKE_SPRING_PRE_LOADER_OPTION="true" RAILS_SPRING_PRE_LOADER_OPTION="true" />
@@ -151,7 +243,11 @@
       <option name="presentableId" value="Default" />
       <updated>1711835627102</updated>
       <workItem from="1711835630248" duration="3914000" />
-      <workItem from="1711879348761" duration="3284000" />
+      <workItem from="1711879348761" duration="18406000" />
+      <workItem from="1712172488380" duration="13201000" />
+      <workItem from="1712226693481" duration="10882000" />
+      <workItem from="1713560713785" duration="7278000" />
+      <workItem from="1713608862232" duration="11511000" />
     </task>
     <task id="LOCAL-00001" summary="Misc stuff">
       <option name="closed" value="true" />
@@ -209,13 +305,46 @@
       <option name="project" value="LOCAL" />
       <updated>1711903209221</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add role to the user serializer">
+      <option name="closed" value="true" />
+      <created>1711903218909</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1711903218909</updated>
+    </task>
+    <task id="LOCAL-00009" summary="something?">
+      <option name="closed" value="true" />
+      <created>1711903231203</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1711903231203</updated>
+    </task>
+    <task id="LOCAL-00010" summary="migrations stuff">
+      <option name="closed" value="true" />
+      <created>1711903249404</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1711903249404</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Add stuff for new controllers">
+      <option name="closed" value="true" />
+      <created>1711903259771</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1711903259771</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Misc stuff" />
     <MESSAGE value="Add roles" />
     <MESSAGE value="Add MC link" />
@@ -223,9 +352,14 @@
     <MESSAGE value="more stuff" />
     <MESSAGE value="Remove debug message" />
     <MESSAGE value="Add controller for managing users" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add controller for managing users" />
+    <MESSAGE value="Add role to the user serializer" />
+    <MESSAGE value="something?" />
+    <MESSAGE value="migrations stuff" />
+    <MESSAGE value="Add stuff for new controllers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add stuff for new controllers" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Cytonic_Backend@Cytonic_Backend.rcov" NAME="Cytonic_Backend Coverage Results" MODIFIED="1711882770043" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Cytonic_Backend" />
+    <SUITE FILE_PATH="coverage/Cytonic_Backend@Cytonic_API__PROD_.rcov" NAME="Cytonic API (PROD) Coverage Results" MODIFIED="1713624611360" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Cytonic_Backend" />
+    <SUITE FILE_PATH="coverage/Cytonic_Backend@Cytonic_Backend.rcov" NAME="Cytonic_Backend Coverage Results" MODIFIED="1713632297291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Cytonic_Backend" />
   </component>
 </project>
