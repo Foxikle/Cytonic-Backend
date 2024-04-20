@@ -4,52 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a462072a-bf69-4ea6-a2f7-1276a938f863" name="Changes" comment="Add stuff for new controllers">
+    <list default="true" id="a462072a-bf69-4ea6-a2f7-1276a938f863" name="Changes" comment="Avatar controllering">
       <change afterPath="$PROJECT_DIR$/app/controllers/banners_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/reports/chat_reports_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/banner.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/chat_report.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/serializers/report_serializer.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/migrate/20240331164216_create_active_storage_tables.active_storage.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/migrate/20240331172131_add_avatar_url.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/migrate/20240331173510_remove_avatars.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/migrate/20240331174709_add_avatar_url_again.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/migrate/20240331183005_rename_avatar_col.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/migrate/20240403214509_add_terminated_column.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/migrate/20240404000427_add_termination_date_and_reason.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/migrate/20240404133803_create_chat_reports.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/migrate/20240420003955_create_banners.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ec70ac5b-3891-4e85-b9c9-607eec003587.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ec70ac5b-3891-4e85-b9c9-607eec003587.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/admin/roles_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/admin/roles_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/admin/users_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/admin/users_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/users/sessions_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users/sessions_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/mailers/application_mailer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/mailers/application_mailer.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/serializers/user_serializer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/serializers/user_serializer.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/credentials.yml.enc" beforeDir="false" afterPath="$PROJECT_DIR$/config/credentials.yml.enc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/environments/development.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/development.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/environments/production.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/production.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/puma.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/puma.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/channels/application_cable/connection_test.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/controllers/.keep" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users/avatars_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/controllers/pages_controller_test.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/controllers/role_controller_test.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/controllers/usernames_controller_test.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/files/.keep" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/application_mailer/restoration_notice.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/users.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/banners.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/integration/.keep" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/application_mailer/termination_notice.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/mailers/.keep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/mailers/previews/user_mailer_preview.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/mailers/user_mailer_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/banners_controller_test.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/models/.keep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/models/user_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/banner_test.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_helper.rb" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -247,7 +204,7 @@
       <workItem from="1712172488380" duration="13201000" />
       <workItem from="1712226693481" duration="10882000" />
       <workItem from="1713560713785" duration="7278000" />
-      <workItem from="1713608862232" duration="11511000" />
+      <workItem from="1713608862232" duration="11996000" />
     </task>
     <task id="LOCAL-00001" summary="Misc stuff">
       <option name="closed" value="true" />
@@ -337,7 +294,135 @@
       <option name="project" value="LOCAL" />
       <updated>1711903259771</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="cleanup">
+      <option name="closed" value="true" />
+      <created>1713643140343</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1713643140343</updated>
+    </task>
+    <task id="LOCAL-00013" summary="cleanup">
+      <option name="closed" value="true" />
+      <created>1713643143933</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1713643143933</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Update schema">
+      <option name="closed" value="true" />
+      <created>1713643160687</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1713643160687</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Added user termination and restoration">
+      <option name="closed" value="true" />
+      <created>1713643188783</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1713643188783</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Serialize the user avatar aswell">
+      <option name="closed" value="true" />
+      <created>1713643200740</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1713643200740</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Add active storage">
+      <option name="closed" value="true" />
+      <created>1713643212495</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1713643212495</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Update credentails">
+      <option name="closed" value="true" />
+      <created>1713643222106</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1713643222106</updated>
+    </task>
+    <task id="LOCAL-00019" summary="make databases production ready">
+      <option name="closed" value="true" />
+      <created>1713643240346</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1713643240346</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Update mail settings">
+      <option name="closed" value="true" />
+      <created>1713643270573</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1713643270573</updated>
+    </task>
+    <task id="LOCAL-00021" summary="begin working on reports">
+      <option name="closed" value="true" />
+      <created>1713643283084</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1713643283084</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Role fixes">
+      <option name="closed" value="true" />
+      <created>1713643298605</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1713643298605</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Add routes for new features">
+      <option name="closed" value="true" />
+      <created>1713643309942</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1713643309942</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Terminations, fix errors">
+      <option name="closed" value="true" />
+      <created>1713643324101</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1713643324101</updated>
+    </task>
+    <task id="LOCAL-00025" summary="very early in development reports">
+      <option name="closed" value="true" />
+      <created>1713643341155</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1713643341155</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Avatar controllering">
+      <option name="closed" value="true" />
+      <created>1713643356525</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1713643356525</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Avatar controllering">
+      <option name="closed" value="true" />
+      <created>1713643361739</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1713643361739</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -356,10 +441,24 @@
     <MESSAGE value="something?" />
     <MESSAGE value="migrations stuff" />
     <MESSAGE value="Add stuff for new controllers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add stuff for new controllers" />
+    <MESSAGE value="cleanup" />
+    <MESSAGE value="Update schema" />
+    <MESSAGE value="Added user termination and restoration" />
+    <MESSAGE value="Serialize the user avatar aswell" />
+    <MESSAGE value="Add active storage" />
+    <MESSAGE value="Update credentails" />
+    <MESSAGE value="make databases production ready" />
+    <MESSAGE value="Update mail settings" />
+    <MESSAGE value="begin working on reports" />
+    <MESSAGE value="Role fixes" />
+    <MESSAGE value="Add routes for new features" />
+    <MESSAGE value="Terminations, fix errors" />
+    <MESSAGE value="very early in development reports" />
+    <MESSAGE value="Avatar controllering" />
+    <option name="LAST_COMMIT_MESSAGE" value="Avatar controllering" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Cytonic_Backend@Cytonic_API__PROD_.rcov" NAME="Cytonic API (PROD) Coverage Results" MODIFIED="1713624611360" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Cytonic_Backend" />
-    <SUITE FILE_PATH="coverage/Cytonic_Backend@Cytonic_Backend.rcov" NAME="Cytonic_Backend Coverage Results" MODIFIED="1713632297291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Cytonic_Backend" />
+    <SUITE FILE_PATH="coverage/Cytonic_Backend@Cytonic_Backend.rcov" NAME="Cytonic_Backend Coverage Results" MODIFIED="1713642879319" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Cytonic_Backend" />
   </component>
 </project>
