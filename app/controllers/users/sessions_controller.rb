@@ -4,6 +4,11 @@ class Users::SessionsController < Devise::SessionsController
 
   def create
     self.resource = warden.authenticate!(auth_options)
+    if User.find(resource.id).terminated
+      render json: { message: "This user has been terminated for violating the Term of Service or User Conduct Agreement." }, status: :unauthorized
+      User.revoke_jwt(nil, resource)
+      return
+    end
     set_flash_message!(:notice, :signed_in)
     sign_in(resource_name, resource)
     yield resource if block_given?
@@ -14,6 +19,19 @@ class Users::SessionsController < Devise::SessionsController
     if request.headers['Authorization'].present?
       jwt_payload = JWT.decode(request.headers['Authorization'].split(' ').last, Rails.application.credentials.devise_jwt_secret_key!).first
       current_user = User.find(jwt_payload['sub'])
+    else
+      render json: {
+        status: 401,
+        message: "No active session."
+      }, status: :unauthorized
+      return
+    end
+
+    if current_user != nil
+      if current_user.terminated
+        render json: { message: "This user has been terminated for violating the Term of Service or User Conduct Agreement." }, status: :unauthorized
+        return
+      end
     end
 
     if User.jwt_revoked?(jwt_payload, current_user)

@@ -11,6 +11,14 @@ class ApplicationMailer < ActionMailer::Base
     end
   end
 
+  def termination_notice(user)
+    devise_mail(user, :termination_notice, {})
+  end
+
+  def restoraion_notice(user)
+    devise_mail(user, :restoration_notice, {})
+  end
+
   def reset_password_instructions(record, token, opts = {})
     @token = token
     devise_mail(record, :reset_password_instructions, opts)

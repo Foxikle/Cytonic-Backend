@@ -64,11 +64,11 @@ Rails.application.configure do
   # config.active_job.queue_adapter = :resque
   # config.active_job.queue_name_prefix = "foxikle_backend_production"
 
-  config.action_mailer.perform_caching = false
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
   config.action_mailer.default :charset => "utf-8"
+  ActionMailer::Base.default :from => "no-reply@cytonic.net"
   config.action_mailer.default_url_options = "api.cytonic.net"
   config.action_mailer.smtp_settings = {
     address: 'smtp-relay.brevo.com',

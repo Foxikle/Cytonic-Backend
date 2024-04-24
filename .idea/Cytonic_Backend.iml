@@ -5,7 +5,7 @@
       <configuration>
         <RAILS_FACET_CONFIG_ID NAME="RAILS_FACET_SUPPORT_REMOVED" VALUE="false" />
         <RAILS_FACET_CONFIG_ID NAME="RAILS_TESTS_SOURCES_PATCHED" VALUE="true" />
-        <RAILS_FACET_CONFIG_ID NAME="RAILS_FACET_APPLICATION_ROOT" VALUE="$MODULE_DIR$/../foxikle_backend" />
+        <RAILS_FACET_CONFIG_ID NAME="RAILS_FACET_APPLICATION_ROOT" VALUE="$MODULE_DIR$" />
       </configuration>
     </facet>
   </component>
@@ -26,7 +26,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/bundle" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/cache" />
     </content>
-    <orderEntry type="jdk" jdkName="rbenv: 3.3.0" jdkType="RUBY_SDK" />
+    <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="actioncable (v7.1.3.2, rbenv: 3.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="actionmailbox (v7.1.3.2, rbenv: 3.3.0) [gem]" level="application" />
@@ -101,7 +101,7 @@
   </component>
   <component name="RModuleSettingsStorage">
     <LOAD_PATH number="0" />
-    <I18N_FOLDERS number="1" string0="$MODULE_DIR$/../foxikle_backend/config/locales" />
+    <I18N_FOLDERS number="1" string0="$MODULE_DIR$/config/locales" />
   </component>
   <component name="RailsGeneratorsCache">
     <option name="generators">
@@ -199,104 +199,104 @@
   </component>
   <component name="RailsPaths" isManagedAutomatically="true">
     <entry key="app">
-      <value>file://$MODULE_DIR$/../foxikle_backend/app</value>
+      <value>file://$MODULE_DIR$/app</value>
     </entry>
     <entry key="app/assets">
-      <value>file://$MODULE_DIR$/../foxikle_backend/app/assets</value>
+      <value>file://$MODULE_DIR$/app/assets</value>
     </entry>
     <entry key="app/channels">
-      <value>file://$MODULE_DIR$/../foxikle_backend/app/channels</value>
+      <value>file://$MODULE_DIR$/app/channels</value>
     </entry>
     <entry key="app/controllers">
-      <value>file://$MODULE_DIR$/../foxikle_backend/app/controllers</value>
+      <value>file://$MODULE_DIR$/app/controllers</value>
     </entry>
     <entry key="app/helpers">
-      <value>file://$MODULE_DIR$/../foxikle_backend/app/helpers</value>
+      <value>file://$MODULE_DIR$/app/helpers</value>
     </entry>
     <entry key="app/mailers">
-      <value>file://$MODULE_DIR$/../foxikle_backend/app/mailers</value>
+      <value>file://$MODULE_DIR$/app/mailers</value>
     </entry>
     <entry key="app/models">
-      <value>file://$MODULE_DIR$/../foxikle_backend/app/models</value>
+      <value>file://$MODULE_DIR$/app/models</value>
     </entry>
     <entry key="app/views">
-      <value>file://$MODULE_DIR$/../foxikle_backend/app/views</value>
+      <value>file://$MODULE_DIR$/app/views</value>
     </entry>
     <entry key="config">
-      <value>file://$MODULE_DIR$/../foxikle_backend/config</value>
+      <value>file://$MODULE_DIR$/config</value>
     </entry>
     <entry key="config/cable">
-      <value>file://$MODULE_DIR$/../foxikle_backend/config/cable.yml</value>
+      <value>file://$MODULE_DIR$/config/cable.yml</value>
     </entry>
     <entry key="config/database">
-      <value>file://$MODULE_DIR$/../foxikle_backend/config/database.yml</value>
+      <value>file://$MODULE_DIR$/config/database.yml</value>
     </entry>
     <entry key="config/environment">
-      <value>file://$MODULE_DIR$/../foxikle_backend/config/environment.rb</value>
+      <value>file://$MODULE_DIR$/config/environment.rb</value>
     </entry>
     <entry key="config/environments">
-      <value>file://$MODULE_DIR$/../foxikle_backend/config/environments</value>
+      <value>file://$MODULE_DIR$/config/environments</value>
     </entry>
     <entry key="config/initializers">
-      <value>file://$MODULE_DIR$/../foxikle_backend/config/initializers</value>
+      <value>file://$MODULE_DIR$/config/initializers</value>
     </entry>
     <entry key="config/locales">
-      <value>file://$MODULE_DIR$/../foxikle_backend/config/locales</value>
+      <value>file://$MODULE_DIR$/config/locales</value>
     </entry>
     <entry key="config/routes">
-      <value>file://$MODULE_DIR$/../foxikle_backend/config/routes</value>
+      <value>file://$MODULE_DIR$/config/routes</value>
     </entry>
     <entry key="config/routes.rb">
-      <value>file://$MODULE_DIR$/../foxikle_backend/config/routes.rb</value>
+      <value>file://$MODULE_DIR$/config/routes.rb</value>
     </entry>
     <entry key="config/secrets">
-      <value>file://$MODULE_DIR$/../foxikle_backend/config</value>
+      <value>file://$MODULE_DIR$/config</value>
     </entry>
     <entry key="db">
-      <value>file://$MODULE_DIR$/../foxikle_backend/db</value>
+      <value>file://$MODULE_DIR$/db</value>
     </entry>
     <entry key="db/migrate">
-      <value>file://$MODULE_DIR$/../foxikle_backend/db/migrate</value>
+      <value>file://$MODULE_DIR$/db/migrate</value>
     </entry>
     <entry key="db/seeds.rb">
-      <value>file://$MODULE_DIR$/../foxikle_backend/db/seeds.rb</value>
+      <value>file://$MODULE_DIR$/db/seeds.rb</value>
     </entry>
     <entry key="lib">
-      <value>file://$MODULE_DIR$/../foxikle_backend/lib</value>
+      <value>file://$MODULE_DIR$/lib</value>
     </entry>
     <entry key="lib/assets">
-      <value>file://$MODULE_DIR$/../foxikle_backend/lib/assets</value>
+      <value>file://$MODULE_DIR$/lib/assets</value>
     </entry>
     <entry key="lib/tasks">
-      <value>file://$MODULE_DIR$/../foxikle_backend/lib/tasks</value>
+      <value>file://$MODULE_DIR$/lib/tasks</value>
     </entry>
     <entry key="lib/templates">
-      <value>file://$MODULE_DIR$/../foxikle_backend/lib/templates</value>
+      <value>file://$MODULE_DIR$/lib/templates</value>
     </entry>
     <entry key="log">
-      <value>file://$MODULE_DIR$/../foxikle_backend/log/development.log</value>
+      <value>file://$MODULE_DIR$/log/development.log</value>
     </entry>
     <entry key="public">
-      <value>file://$MODULE_DIR$/../foxikle_backend/public</value>
+      <value>file://$MODULE_DIR$/public</value>
     </entry>
     <entry key="public/javascripts">
-      <value>file://$MODULE_DIR$/../foxikle_backend/public/javascripts</value>
+      <value>file://$MODULE_DIR$/public/javascripts</value>
     </entry>
     <entry key="public/stylesheets">
-      <value>file://$MODULE_DIR$/../foxikle_backend/public/stylesheets</value>
+      <value>file://$MODULE_DIR$/public/stylesheets</value>
     </entry>
     <entry key="test/mailers/previews">
-      <value>file://$MODULE_DIR$/../foxikle_backend/test/mailers/previews</value>
-      <value>file://$MODULE_DIR$/../foxikle_backend/test/mailers/previews</value>
+      <value>file://$MODULE_DIR$/test/mailers/previews</value>
+      <value>file://$MODULE_DIR$/test/mailers/previews</value>
     </entry>
     <entry key="tmp">
-      <value>file://$MODULE_DIR$/../foxikle_backend/tmp</value>
+      <value>file://$MODULE_DIR$/tmp</value>
     </entry>
     <entry key="vendor">
-      <value>file://$MODULE_DIR$/../foxikle_backend/vendor</value>
+      <value>file://$MODULE_DIR$/vendor</value>
     </entry>
     <entry key="vendor/assets">
-      <value>file://$MODULE_DIR$/../foxikle_backend/vendor/assets</value>
+      <value>file://$MODULE_DIR$/vendor/assets</value>
     </entry>
   </component>
   <component name="RakeTasksCache-v2">
