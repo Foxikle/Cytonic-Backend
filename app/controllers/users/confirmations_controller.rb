@@ -43,9 +43,9 @@ class Users::ConfirmationsController < Devise::ConfirmationsController
 
     if resource.errors.empty?
       # render json: {message: "Success! Your account has been verified!", status: 200}, status: :ok
-      redirect_to "https://cytonic.net/auth/login?redirect=confirmed_email", status: 302
+      redirect_to "https://cytonic.net/auth/login?redirect=confirmed_email", status: 302, allow_other_host: true
     else
-      redirect_to "https://cytonic.net/auth/login?redirect=invalid_link", status: 302
+      redirect_to "https://cytonic.net/auth/login?redirect=invalid_link", status: 302, allow_other_host: true
     end
   end
 end
