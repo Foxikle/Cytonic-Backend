@@ -10,7 +10,7 @@ class Users::AvatarsController < ApplicationController
 
     url = rails_blob_path(user.avatar, disposition: "attachment")
     puts url
-    user.update(avatar_url: 'http://localhost:3000' + url)
+    user.update(avatar_url: 'https://api.cytonic.net' + url)
     render json: {
       message: 'Successfully set ' + user.name + '\'s avatar.',
       data: rails_blob_path(user.avatar, disposition: "attachment")
