@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a462072a-bf69-4ea6-a2f7-1276a938f863" name="Changes" comment="Avatar controllering">
-      <change afterPath="$PROJECT_DIR$/app/controllers/banners_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/mailers/application_mailer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/mailers/application_mailer.rb" afterDir="false" />
+    <list default="true" id="a462072a-bf69-4ea6-a2f7-1276a938f863" name="Changes" comment="add new emails">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/users/avatars_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users/avatars_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/users/confirmations_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users/confirmations_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/users/registrations_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users/registrations_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/application_mailer/confirmation_instructions.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/application_mailer/confirmation_instructions.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/application_mailer/restoration_notice.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/application_mailer/restoration_notice.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/environments/production.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/production.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +66,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Docker.Compile Docker image.executor": "Run",
     "Rails.Cytonic API (PROD).executor": "Run",
     "Rails.Cytonic_Backend.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -120,7 +127,7 @@
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="127.0.0.1" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="default" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="puma" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="development" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
       <method v="2" />
@@ -176,7 +183,18 @@
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TESTOPTS" VALUE="" />
       <method v="2" />
     </configuration>
+    <configuration name="Compile Docker image" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="imageTag" value="cytonic-backend" />
+          <option name="buildOnly" value="true" />
+          <option name="sourceFilePath" value="Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <list>
+      <item itemvalue="Docker.Compile Docker image" />
       <item itemvalue="Rails.Cytonic_Backend" />
       <item itemvalue="Rails.Cytonic API (PROD)" />
       <item itemvalue="Rake.spec: Cytonic_Backend" />
@@ -204,7 +222,10 @@
       <workItem from="1712172488380" duration="13201000" />
       <workItem from="1712226693481" duration="10882000" />
       <workItem from="1713560713785" duration="7278000" />
-      <workItem from="1713608862232" duration="11996000" />
+      <workItem from="1713608862232" duration="12662000" />
+      <workItem from="1713657111390" duration="2270000" />
+      <workItem from="1713991419516" duration="13490000" />
+      <workItem from="1714042098383" duration="4618000" />
     </task>
     <task id="LOCAL-00001" summary="Misc stuff">
       <option name="closed" value="true" />
@@ -422,7 +443,39 @@
       <option name="project" value="LOCAL" />
       <updated>1713643361739</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Have roles">
+      <option name="closed" value="true" />
+      <created>1713643373606</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1713643373606</updated>
+    </task>
+    <task id="LOCAL-00029" summary="workspacing">
+      <option name="closed" value="true" />
+      <created>1713643402027</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1713643402027</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Banner controllering">
+      <option name="closed" value="true" />
+      <created>1713643407903</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1713643407903</updated>
+    </task>
+    <task id="LOCAL-00031" summary="add new emails">
+      <option name="closed" value="true" />
+      <created>1713643413603</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1713643413603</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -430,10 +483,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Misc stuff" />
-    <MESSAGE value="Add roles" />
-    <MESSAGE value="Add MC link" />
-    <MESSAGE value="Roles controller" />
     <MESSAGE value="more stuff" />
     <MESSAGE value="Remove debug message" />
     <MESSAGE value="Add controller for managing users" />
@@ -455,10 +504,14 @@
     <MESSAGE value="Terminations, fix errors" />
     <MESSAGE value="very early in development reports" />
     <MESSAGE value="Avatar controllering" />
-    <option name="LAST_COMMIT_MESSAGE" value="Avatar controllering" />
+    <MESSAGE value="Have roles" />
+    <MESSAGE value="workspacing" />
+    <MESSAGE value="Banner controllering" />
+    <MESSAGE value="add new emails" />
+    <option name="LAST_COMMIT_MESSAGE" value="add new emails" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Cytonic_Backend@Cytonic_API__PROD_.rcov" NAME="Cytonic API (PROD) Coverage Results" MODIFIED="1713624611360" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Cytonic_Backend" />
-    <SUITE FILE_PATH="coverage/Cytonic_Backend@Cytonic_Backend.rcov" NAME="Cytonic_Backend Coverage Results" MODIFIED="1713642879319" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Cytonic_Backend" />
+    <SUITE FILE_PATH="coverage/Cytonic_Backend@Cytonic_API__PROD_.rcov" NAME="Cytonic API (PROD) Coverage Results" MODIFIED="1714003029562" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Cytonic_Backend" />
+    <SUITE FILE_PATH="coverage/Cytonic_Backend@Cytonic_Backend.rcov" NAME="Cytonic_Backend Coverage Results" MODIFIED="1714047571934" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Cytonic_Backend" />
   </component>
 </project>
