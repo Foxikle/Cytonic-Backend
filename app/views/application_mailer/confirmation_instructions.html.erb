@@ -1,7 +1,7 @@
 <p>Welcome <%= @resource.name %>!</p>
 <p>Before you log in, you must confirm your email.</p>
 <p>To do so, please confirm your email through the link below, Thanks!</p>
-<a href="<%= "http://" + Rails.application.config.action_mailer.default_url_options + "/confirmation?confirmation_token=" + @token%>">Confirm my account</a>
+<a href="<%= "https://" + Rails.application.config.action_mailer.default_url_options + "/confirmation?confirmation_token=" + @token%>">Confirm my account</a>
 
 <p>This email was sent to you because you signed up for an account at <a href="https://cytonic.net">CytonicMC</a>. If this is not the case, this email can be safley igored. Cheers!</p>
 
