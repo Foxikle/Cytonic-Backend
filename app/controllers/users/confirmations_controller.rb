@@ -5,22 +5,35 @@ class Users::ConfirmationsController < Devise::ConfirmationsController
 
   # POST /resource/confirmation
   def create
-    self.resource = resource_class.send_confirmation_instructions(resource_params)
-    yield resource if block_given?
+    user = User.find(params[:id])
 
-    if successfully_sent?(resource)
-      render json: {
-        status: 200,
-        message: 'Email Sent'
-      }, status: :ok
-      # respond_with({}, location: after_resending_confirmation_instructions_path_for(resource_name))
+    if user
+      if user.confirmed?
+        render json: { message: 'Account is already confirmed.' }, status: 200
+      else
+        user.send_confirmation_instructions
+        render json: { message: 'Confirmation email has been resent.' }, status: 200
+      end
     else
-      render json: {
-        status: 500,
-        message: 'Internal Server Error'
-      }, status: 500
-      # respond_with(resource)
+      render json: { error: 'User not found.' }, status: 404
     end
+
+    # self.resource = resource_class.send_confirmation_instructions(resource_params)
+    # yield resource if block_given?
+    #
+    # if successfully_sent?(resource)
+    #   render json: {
+    #     status: 200,
+    #     message: 'Email Sent'
+    #   }, status: :ok
+    #   # respond_with({}, location: after_resending_confirmation_instructions_path_for(resource_name))
+    # else
+    #   render json: {
+    #     status: 500,
+    #     message: 'Internal Server Error :('
+    #   }, status: 500
+    #   # respond_with(resource)
+    # end
   end
 
   # GET /confirmation?confirmation_token=abcdef
@@ -30,9 +43,9 @@ class Users::ConfirmationsController < Devise::ConfirmationsController
 
     if resource.errors.empty?
       # render json: {message: "Success! Your account has been verified!", status: 200}, status: :ok
-      redirect_to "http://localhost:5173/auth/login?redirect=confirmed_email", status: 302
+      redirect_to "https://cytonic.net/auth/login?redirect=confirmed_email", status: 302
     else
-      redirect_to "http://localhost:5173/auth/login?redirect=invalid_link", status: 302
+      redirect_to "https://cytonic.net/auth/login?redirect=invalid_link", status: 302
     end
   end
 end
