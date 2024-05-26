@@ -1,5 +1,9 @@
 class Users::AvatarsController < ApplicationController
   def set_avatar
+    unless current_user
+      render json: { message: 'You must be logged in!' }, status: :unauthorized
+      return
+    end
     user = User.find(current_user.id)
 
     # if user.avatar.attached?
@@ -8,8 +12,13 @@ class Users::AvatarsController < ApplicationController
 
     user.avatar.attach(params[:avatar])
 
+    if user.avatar.attached?
+      puts 'Success!'
+    else
+      render json: {message: "An error occourred whilst saving your new profile picture"}, status: :unprocessable_entity
+    end
+
     url = rails_blob_path(user.avatar, disposition: "attachment")
-    puts url
     user.update(avatar_url: 'https://api.cytonic.net' + url)
     render json: {
       message: 'Successfully set ' + user.name + '\'s avatar.',
