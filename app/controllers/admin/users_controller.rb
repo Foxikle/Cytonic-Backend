@@ -2,7 +2,7 @@
 
 class Admin::UsersController < ApplicationController
   def list_users
-    if current_user == nil
+    unless current_user
       render json: { message: "You do not have access to this." }, status: :unauthorized
       return
     end
