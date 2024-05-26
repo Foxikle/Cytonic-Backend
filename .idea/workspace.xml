@@ -4,15 +4,42 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a462072a-bf69-4ea6-a2f7-1276a938f863" name="Changes" comment="add new emails">
+    <list default="true" id="a462072a-bf69-4ea6-a2f7-1276a938f863" name="Changes" comment="Create controller to handle user mutes">
+      <change afterPath="$PROJECT_DIR$/app/controllers/forums/categories_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/forums/comments_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/forums/lock_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/forums/threads_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/forums/topics_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/reports/comment_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/reports/thread_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/users/public_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/comment.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/comment_report.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/comment_version.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/forums/category.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/forums/category_impl.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/forums/thread.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/forums/topic.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/forums/topic_impl.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/thread_report.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/thread_version.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/serializers/category_serializer.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/serializers/comment_report_serializer.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/serializers/comment_serializer.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/serializers/safe_user_serializer.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/serializers/thread_report_serializer.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/serializers/thread_serializer.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/admin/users_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/admin/users_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/users/avatars_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users/avatars_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/users/confirmations_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users/confirmations_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/users/registrations_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users/registrations_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/application_mailer/confirmation_instructions.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/application_mailer/confirmation_instructions.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/application_mailer/restoration_notice.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/application_mailer/restoration_notice.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/environments/production.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/production.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/role.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/role.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/serializers/user_serializer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/serializers/user_serializer.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/initializers/cors.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/cors.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/initializers/devise.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/devise.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +49,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Ruby Module" />
         <option value="Ruby Class" />
       </list>
     </option>
@@ -63,26 +91,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Docker.Compile Docker image.executor": "Run",
-    "Rails.Cytonic API (PROD).executor": "Run",
-    "Rails.Cytonic_Backend.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/usr/bin/ruby",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ruby.structure.view.model.defaults.configured": "true",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Docker.Compile Docker image.executor&quot;: &quot;Run&quot;,
+    &quot;Rails.Cytonic API (PROD).executor&quot;: &quot;Run&quot;,
+    &quot;Rails.Cytonic_Backend.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/foxikle/RubymineProjects/Cytonic_Backend/app/controllers/admin&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ruby.structure.view.model.defaults.configured&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/controllers/admin" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/controllers/forums" />
+      <recent name="$PROJECT_DIR$/app/controllers/reports" />
+      <recent name="$PROJECT_DIR$/app/models/forums" />
+    </key>
+  </component>
   <component name="RunManager" selected="Rails.Cytonic_Backend">
     <configuration name="Cytonic API (PROD)" type="RailsRunConfigurationType" factoryName="Rails">
       <module name="Cytonic_Backend" />
@@ -226,6 +264,24 @@
       <workItem from="1713657111390" duration="2270000" />
       <workItem from="1713991419516" duration="13490000" />
       <workItem from="1714042098383" duration="4618000" />
+      <workItem from="1714048250213" duration="630000" />
+      <workItem from="1714062741526" duration="23372000" />
+      <workItem from="1714147211314" duration="11168000" />
+      <workItem from="1714215538080" duration="1329000" />
+      <workItem from="1714318244996" duration="4876000" />
+      <workItem from="1714337584163" duration="8166000" />
+      <workItem from="1714609295591" duration="1288000" />
+      <workItem from="1715420497149" duration="237000" />
+      <workItem from="1715420741859" duration="1908000" />
+      <workItem from="1715449320171" duration="6349000" />
+      <workItem from="1715507631198" duration="14518000" />
+      <workItem from="1715550941357" duration="2310000" />
+      <workItem from="1715804381107" duration="608000" />
+      <workItem from="1716507492482" duration="3668000" />
+      <workItem from="1716597676983" duration="5988000" />
+      <workItem from="1716628939796" duration="18552000" />
+      <workItem from="1716721186512" duration="2417000" />
+      <workItem from="1716747564728" duration="730000" />
     </task>
     <task id="LOCAL-00001" summary="Misc stuff">
       <option name="closed" value="true" />
@@ -475,7 +531,31 @@
       <option name="project" value="LOCAL" />
       <updated>1713643413603</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Fix error with redirects">
+      <option name="closed" value="true" />
+      <created>1714066409314</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1714066409314</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Create migrations">
+      <option name="closed" value="true" />
+      <created>1716748584652</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1716748584653</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Create controller to handle user mutes">
+      <option name="closed" value="true" />
+      <created>1716748626640</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1716748626640</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -483,9 +563,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="more stuff" />
-    <MESSAGE value="Remove debug message" />
-    <MESSAGE value="Add controller for managing users" />
     <MESSAGE value="Add role to the user serializer" />
     <MESSAGE value="something?" />
     <MESSAGE value="migrations stuff" />
@@ -508,10 +585,27 @@
     <MESSAGE value="workspacing" />
     <MESSAGE value="Banner controllering" />
     <MESSAGE value="add new emails" />
-    <option name="LAST_COMMIT_MESSAGE" value="add new emails" />
+    <MESSAGE value="Fix error with redirects" />
+    <MESSAGE value="Create migrations" />
+    <MESSAGE value="Create controller to handle user mutes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create controller to handle user mutes" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/app/controllers/forums/threads_controller.rb</url>
+          <line>3</line>
+          <properties myBlockOrdinal="-1">
+            <option name="block-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Cytonic_Backend@Cytonic_API__PROD_.rcov" NAME="Cytonic API (PROD) Coverage Results" MODIFIED="1714003029562" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Cytonic_Backend" />
-    <SUITE FILE_PATH="coverage/Cytonic_Backend@Cytonic_Backend.rcov" NAME="Cytonic_Backend Coverage Results" MODIFIED="1714047571934" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Cytonic_Backend" />
+    <SUITE FILE_PATH="coverage/Cytonic_Backend@Cytonic_Backend.rcov" NAME="Cytonic_Backend Coverage Results" MODIFIED="1716747573433" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Cytonic_Backend" />
   </component>
 </project>

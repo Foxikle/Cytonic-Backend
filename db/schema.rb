@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_04_20_003955) do
+ActiveRecord::Schema[7.1].define(version: 2024_05_25_205650) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -59,11 +59,99 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_20_003955) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "comment_reports", force: :cascade do |t|
+    t.bigint "comment_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "resolved_at"
+    t.boolean "resolved", default: false, null: false
+    t.text "action"
+    t.bigint "resolving_user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "reason", default: "UNKOWN", null: false
+    t.index ["comment_id"], name: "index_comment_reports_on_comment_id"
+    t.index ["resolving_user_id"], name: "index_comment_reports_on_resolving_user_id"
+    t.index ["user_id"], name: "index_comment_reports_on_user_id"
+  end
+
+  create_table "comment_versions", force: :cascade do |t|
+    t.bigint "comment_id", null: false
+    t.bigint "user_id", null: false
+    t.text "body"
+    t.datetime "edited_at", precision: nil
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["comment_id"], name: "index_comment_versions_on_comment_id"
+    t.index ["user_id"], name: "index_comment_versions_on_user_id"
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "thread_id", null: false
+    t.text "body"
+    t.boolean "edited"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "deleted_by"
+    t.datetime "deleted_at"
+    t.boolean "deleted", default: false
+    t.index ["thread_id"], name: "index_comments_on_thread_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
+  end
+
   create_table "roles", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "role", default: 0
     t.string "name", default: ""
+  end
+
+  create_table "thread_reports", force: :cascade do |t|
+    t.bigint "thread_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "resolved_at"
+    t.boolean "resolved", default: false, null: false
+    t.text "action"
+    t.text "reason"
+    t.bigint "resolving_user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["resolving_user_id"], name: "index_thread_reports_on_resolving_user_id"
+    t.index ["thread_id"], name: "index_thread_reports_on_thread_id"
+    t.index ["user_id"], name: "index_thread_reports_on_user_id"
+  end
+
+  create_table "thread_versions", force: :cascade do |t|
+    t.bigint "thread_id", null: false
+    t.bigint "user_id", null: false
+    t.text "body"
+    t.datetime "edited_at", precision: nil
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["thread_id"], name: "index_thread_versions_on_thread_id"
+    t.index ["user_id"], name: "index_thread_versions_on_user_id"
+  end
+
+  create_table "threads", force: :cascade do |t|
+    t.string "title", null: false
+    t.string "category", null: false
+    t.string "topic", null: false
+    t.text "body", null: false
+    t.bigint "user_id", null: false
+    t.boolean "private", default: false
+    t.boolean "deleted", default: false
+    t.datetime "deleted_at", precision: nil
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.datetime "locked_at"
+    t.boolean "locked"
+    t.boolean "edited"
+    t.datetime "edited_at"
+    t.index ["category"], name: "index_threads_on_category"
+    t.index ["deleted_at"], name: "index_threads_on_deleted_at"
+    t.index ["title"], name: "index_threads_on_title"
+    t.index ["topic"], name: "index_threads_on_topic"
+    t.index ["user_id"], name: "index_threads_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -92,6 +180,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_20_003955) do
     t.boolean "terminated", default: false
     t.datetime "termination_date"
     t.text "termination_reason"
+    t.boolean "muted", default: false
+    t.datetime "muted_at"
+    t.datetime "muted_until"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["jti"], name: "index_users_on_jti", unique: true
@@ -102,4 +193,16 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_20_003955) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "comment_reports", "users"
+  add_foreign_key "comment_reports", "users", column: "resolving_user_id"
+  add_foreign_key "comment_versions", "comments"
+  add_foreign_key "comment_versions", "users"
+  add_foreign_key "comments", "threads"
+  add_foreign_key "comments", "users"
+  add_foreign_key "thread_reports", "threads"
+  add_foreign_key "thread_reports", "users"
+  add_foreign_key "thread_reports", "users", column: "resolving_user_id"
+  add_foreign_key "thread_versions", "threads"
+  add_foreign_key "thread_versions", "users"
+  add_foreign_key "threads", "users"
 end
