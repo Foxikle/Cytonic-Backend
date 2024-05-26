@@ -9,6 +9,10 @@ module Role
     [OWNER, ADMIN, MODERATOR, HELPER, USER]
   end
 
+  def self.can_moderate
+    [OWNER, ADMIN, MODERATOR]
+  end
+
   def self.value_of(str)
     case str
     when OWNER
