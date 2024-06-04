@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   patch '/usernames/edit', to: 'users/usernames#update'
   put '/users/avatars', to: 'users/avatars#set_avatar'
   delete '/users/avatars', to: 'users/avatars#remove_avatar'
-
+  get '/users/:id', to: 'users/public#show'
   # Reports
   post '/reports/chat', to: 'reports/chat_reports#new'
 
