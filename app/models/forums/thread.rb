@@ -45,8 +45,6 @@ class Forums::Thread < ApplicationRecord
 
     restricted_categories = ["STAFF_CONTACT"]
     restricted_topics = %w[BUG_REPORTS PUNISHMENT_APPEALS]
-    puts self.title + " restricted? " + self.deleted
-
     restricted_categories.include?(self.category) || restricted_topics.include?(self.topic) || self.deleted
   end
 
