@@ -105,93 +105,93 @@ class Forums::ThreadsController < ApplicationController
     # Handle unexpected errors and return a server error status
     render json: { error: "An error occurred: #{e.message}" }, status: :internal_server_error
   end
-end
 
-# DELETE /forums/threads/:id
-def destroy
-  unless current_user
-    render json: { message: "You must be logged in to delete a thread." }, status: :unauthorized
+  # DELETE /forums/threads/:id
+  def destroy
+    unless current_user
+      render json: { message: "You must be logged in to delete a thread." }, status: :unauthorized
+    end
+
+    @thread = Forums::Thread.find(params[:id])
+
+    if current_user.id == @thread.user.id
+      @thread.soft_delete
+    elsif can_delete current_user.role
+      @thread.soft_delete
+    else
+      render json: { message: "You cannot delete this thread." }, status: :forbidden
+      return
+    end
+
+    # Respond with a success message
+    render json: { message: "Thread successfully deleted." }, status: :ok
+  rescue ActiveRecord::RecordNotFound
+    # Handle case where the thread doesn't exist
+    render json: { error: "The specified thread was not found." }, status: :not_found
+  rescue StandardError => e
+    # Handle unexpected errors
+    render json: { error: "An error occurred while deleting the thread: #{e.message}" }, status: :internal_server_error
   end
 
-  @thread = Forums::Thread.find(params[:id])
+  def update
+    unless current_user
+      render json: { error: 'You must be logged in to edit a thread' }, status: :unauthorized
+      return
+    end
 
-  if current_user.id == @thread.user.id
-    @thread.soft_delete
-  elsif can_delete current_user.role
-    @thread.soft_delete
-  else
-    render json: { message: "You cannot delete this thread." }, status: :forbidden
-    return
+    @thread = Forums::Thread.find(params[:id])
+
+    unless @thread
+      render json: { error: 'Comment not found' }, status: :not_found
+      return
+    end
+
+    unless @thread.user == current_user
+      render json: { error: 'You do not have permission to edit this thread' }, status: :forbidden
+      return
+    end
+
+    @thread.update(body: params[:body])
+    @thread.update(edited: true)
+    @thread.update(edited_at: DateTime.now)
+
+    if @thread.save
+      render json: ThreadSerializer.new(@thread).serializable_hash, status: :ok
+    else
+      render json: @thread.errors, status: :unprocessable_entity
+    end
   end
 
-  # Respond with a success message
-  render json: { message: "Thread successfully deleted." }, status: :ok
-rescue ActiveRecord::RecordNotFound
-  # Handle case where the thread doesn't exist
-  render json: { error: "The specified thread was not found." }, status: :not_found
-rescue StandardError => e
-  # Handle unexpected errors
-  render json: { error: "An error occurred while deleting the thread: #{e.message}" }, status: :internal_server_error
-end
+  private
 
-def update
-  unless current_user
-    render json: { error: 'You must be logged in to edit a thread' }, status: :unauthorized
-    return
+  def can_delete(role)
+    case role
+    when Role::OWNER, Role::ADMIN, Role::MODERATOR
+      true
+    else
+      false
+    end
   end
 
-  @thread = Forums::Thread.find(params[:id])
-
-  unless @thread
-    render json: { error: 'Comment not found' }, status: :not_found
-    return
+  def unrestricted?(role)
+    case role
+    when Role::OWNER, Role::ADMIN, Role::MODERATOR
+      true
+    else
+      false
+    end
   end
 
-  unless @thread.user == current_user
-    render json: { error: 'You do not have permission to edit this thread' }, status: :forbidden
-    return
-  end
-
-  @thread.update(body: params[:body])
-  @thread.update(edited: true)
-  @thread.update(edited_at: DateTime.now)
-
-  if @thread.save
-    render json: ThreadSerializer.new(@thread).serializable_hash, status: :ok
-  else
-    render json: @thread.errors, status: :unprocessable_entity
-  end
-end
-
-private
-
-def can_delete(role)
-  case role
-  when Role::OWNER, Role::ADMIN, Role::MODERATOR
-    true
-  else
-    false
-  end
-end
-
-def unrestricted?(role)
-  case role
-  when Role::OWNER, Role::ADMIN, Role::MODERATOR
-    true
-  else
-    false
-  end
-end
-
-def are_compatible?(category, topic)
-  case category
-  when Forums::Category::OFFICIAL_COMMUNICATIONS
-    (topic == Forums::Topic::NEWS_AND_ANNOUCEMENTS || topic == Forums::Topic::DEVLOGS)
-  when Forums::Category::STAFF_CONTACT
-    (topic == Forums::Topic::BUG_REPORTS || topic == Forums::Topic::PUNISHMENT_APPEALS)
-  when Forums::Category::GAMES
-    (topic == Forums::Topic::GILDED_GORGE)
-  else
-    false
+  def are_compatible?(category, topic)
+    case category
+    when Forums::Category::OFFICIAL_COMMUNICATIONS
+      (topic == Forums::Topic::NEWS_AND_ANNOUCEMENTS || topic == Forums::Topic::DEVLOGS)
+    when Forums::Category::STAFF_CONTACT
+      (topic == Forums::Topic::BUG_REPORTS || topic == Forums::Topic::PUNISHMENT_APPEALS)
+    when Forums::Category::GAMES
+      (topic == Forums::Topic::GILDED_GORGE)
+    else
+      false
+    end
   end
 end
