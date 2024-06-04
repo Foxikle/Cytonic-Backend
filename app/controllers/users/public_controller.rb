@@ -6,7 +6,7 @@ class Users::PublicController < ApplicationController
   def show
     @user = User.find(params[:id])
 
-    render json: {username: @user.name, role: @user.role}, status: :ok
+    render json: SafeUserSerializer.new(@user).serializable_hash, status: :ok
   rescue ActiveRecord::RecordNotFound
     render json: { message: "The requested user was not found" }, status: :not_found
   end
