@@ -55,11 +55,12 @@ class Forums::ThreadsController < ApplicationController
     @thread = Forums::Thread.find(params[:id])
 
     # Make sure the user is authenticated if they need to be
-    if @thread.private
+    if @thread.private || @thread.deleted
       unless current_user
         render json: { message: "This thread has restricted access." }, status: :unauthorized
         return
       end
+
       unless Forums::Topic.is_allowed_to_view?(current_user.role).include?(Forums::Topic.find(@thread.topic))
         render json: { message: "This thread has restricted access." }, status: :forbidden
         return
