@@ -8,9 +8,10 @@ class Admin::UsersController < ApplicationController
     end
     if is_allowed? User.find(current_user.id).role
       # User can see/list all users
+      attributes = User.column_names.reject { |attr| attr.include?('token') || attr.include?('encrypted') }
       render json: {
         message: "Successfully fetched all users.",
-        data: User.all
+        data: User.all.as_json(only: attributes)
       }, status: :ok
     else
       render json: { message: "You do not have access to this." }, status: :unauthorized
