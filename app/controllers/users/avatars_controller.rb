@@ -30,6 +30,8 @@ class Users::AvatarsController < ApplicationController
     user = User.find(current_user.id)
     if user.avatar.attached?
       user.avatar.purge
+      user.avatar_url = nil
+      user.save!
       render json: { message: 'Successfully removed ' + user.name + '\'s avatar.' }, status: :ok
     else
       render json: { message: user.name + 'does not have an avatar to remove.' }, status: :unprocessable_entity
