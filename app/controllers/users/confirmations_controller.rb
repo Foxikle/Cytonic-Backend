@@ -14,6 +14,17 @@ class Users::ConfirmationsController < Devise::ConfirmationsController
         user.send_confirmation_instructions
         render json: { message: 'Confirmation email has been resent.' }, status: 200
       end
+    end
+
+  rescue ActiveRecord::RecordNotFound
+    user = User.find_by(email: params[:id])
+    if user
+      if user.confirmed?
+        render json: { message: 'Account is already confirmed.' }, status: 200
+      else
+        user.send_confirmation_instructions
+        render json: { message: 'Confirmation email has been resent.' }, status: 200
+      end
     else
       render json: { error: 'User not found.' }, status: 404
     end
