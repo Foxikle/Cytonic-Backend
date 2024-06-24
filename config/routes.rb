@@ -30,6 +30,7 @@ Rails.application.routes.draw do
     get '/users', to: 'users#list_users'
     post '/users/terminate', to: 'users#terminate_user'
     post '/users/restore', to: 'users#restore_user'
+    delete '/avatars/:id', to: 'avatars#remove_avatar'
   end
 
   # Threads
