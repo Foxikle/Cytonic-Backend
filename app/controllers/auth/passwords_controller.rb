@@ -11,7 +11,7 @@ class Auth::PasswordsController < ApplicationController
 
   # GET /auth/passwords?reset_token=abcdef
   def index
-    host = 'http://localhost:5173' # 'https://cytonic.net' for production
+    host = 'https://cytonic.net' #'http://localhost:5173'
     token = params[:reset_token].to_s
     id = params[:id].to_s
 
