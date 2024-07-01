@@ -58,6 +58,10 @@ Rails.application.routes.draw do
     resources :public, only: [:show]
   end
 
+  namespace :auth do
+    resources :passwords, only: [:create, :update, :index]
+  end
+
   namespace :reports do
     resources :comment, only: [:create, :index, :show, :update, :destroy]
   end
