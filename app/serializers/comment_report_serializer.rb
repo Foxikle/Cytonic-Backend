@@ -1,14 +1,21 @@
 class CommentReportSerializer
-  include JSONAPI::Serializer
-  attributes :resolved, :resolved_at, :created_at, :updated_at, :action, :reason, :user
 
-  attribute :comment do |report|
-    CommentSerializer.new(report.comment).serializable_hash
+  def initialize(report, current_user)
+    @report = report
+    @current_user = current_user
   end
 
-  # has stuff
-  belongs_to :comment, serializer: CommentSerializer # the comment in question
-  belongs_to :user, class_name: 'User', foreign_key: 'user_id', serializer: SafeUserSerializer, attributes: [:id, :name, :role, :avatar_url] # the user who reported the comment
-  belongs_to :resolving_user, class_name: 'User', foreign_key: 'resolving_user_id', optional: true, serializer: SafeUserSerializer, attributes: [:id, :name, :role, :avatar_url]  # the user who resolved the reported comment
-
+  def as_json(*)
+    {
+      id: @report.id,
+      resolved: @report.resolved,
+      resolved_at: @report.resolved_at,
+      created_at: @report.created_at,
+      updated_at: @report.updated_at,
+      action: @report.action,
+      reported_user: SafeUserSerializer.new(@report.user).as_json,
+      resolving_user: SafeUserSerializer.new(@report.resolving_user).as_json,
+      comment: CommentSerializer.new(@report.comment).as_json,
+    }
+  end
 end

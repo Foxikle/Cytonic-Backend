@@ -1,20 +1,32 @@
 class CommentSerializer
-  include JSONAPI::Serializer
 
-  attributes :created_at, :updated_at, :body, :edited, :deleted_at, :deleted # Fields to include in serialization
-
-  attribute :user do |comment|
-    SafeUserSerializer.new(comment.user).serializable_hash
+  def initialize(comment)
+    @comment = comment
   end
 
-  attribute :deleted_by do |comment|
-    if comment.deleted
-      SafeUserSerializer.new(User.find(comment.deleted_by)).serializable_hash
+  def as_json(*)
+    {
+      id: @comment.id,
+      created_at: @comment.created_at,
+      updated_at: @comment.updated_at,
+      body: @comment.body,
+      edited: @comment.edited,
+      deleted_at: @comment.deleted_at,
+      deleted_by: deleted_by,
+      deleted: @comment.deleted,
+      user: SafeUserSerializer.new(@comment.user).as_json
+    }
+  end
+
+  private
+
+  # Returns the user associated with deleting the comment
+  def deleted_by
+    if @comment.deleted
+      SafeUserSerializer.new(User.find(@comment.deleted_by)).as_json
     else
       nil
     end
   end
-
-  belongs_to :user, serializer: UserSerializer
 end
 

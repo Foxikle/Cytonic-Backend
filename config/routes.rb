@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users, path: '', path_names: {
-    sign_in: 'login',
-    sign_out: 'logout',
-    registration: 'signup',
-    confirmation: 'confirmation',
+    sign_in: 'auth/login',
+    sign_out: 'auth/logout',
+    registration: 'auth/signup',
+    confirmation: 'auth/confirmation',
   },
   controllers: {
     sessions: 'users/sessions',
@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   }
 
   # Editing / user panel
+  get '/auth/sessions', to: 'users/sessions#new'
   patch '/usernames/edit', to: 'users/usernames#update'
   put '/users/avatars', to: 'users/avatars#set_avatar'
   delete '/users/avatars', to: 'users/avatars#remove_avatar'

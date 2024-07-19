@@ -4,42 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a462072a-bf69-4ea6-a2f7-1276a938f863" name="Changes" comment="Create controller to handle user mutes">
-      <change afterPath="$PROJECT_DIR$/app/controllers/forums/categories_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/forums/comments_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/forums/lock_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/forums/threads_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/forums/topics_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/reports/comment_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/reports/thread_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/users/public_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/comment.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/comment_report.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/comment_version.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/forums/category.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/forums/category_impl.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/forums/thread.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/forums/topic.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/forums/topic_impl.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/thread_report.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/thread_version.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/serializers/category_serializer.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/serializers/comment_report_serializer.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/serializers/comment_serializer.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/serializers/safe_user_serializer.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/serializers/thread_report_serializer.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/serializers/thread_serializer.rb" afterDir="false" />
+    <list default="true" id="a462072a-bf69-4ea6-a2f7-1276a938f863" name="Changes" comment="k">
+      <change afterPath="$PROJECT_DIR$/app/serializers/topic_serializer.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Cytonic_Backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Cytonic_Backend.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/admin/users_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/admin/users_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/users/avatars_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users/avatars_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/role.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/role.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/users/sessions_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users/sessions_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/serializers/category_serializer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/serializers/category_serializer.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/serializers/comment_report_serializer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/serializers/comment_report_serializer.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/serializers/comment_serializer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/serializers/comment_serializer.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/serializers/report_serializer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/serializers/report_serializer.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/serializers/safe_user_serializer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/serializers/safe_user_serializer.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/serializers/thread_report_serializer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/serializers/thread_report_serializer.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/serializers/thread_serializer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/serializers/thread_serializer.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/serializers/user_serializer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/serializers/user_serializer.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/initializers/cors.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/cors.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/initializers/devise.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/devise.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +80,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/foxikle/RubymineProjects/Cytonic_Backend/app/controllers/admin&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/foxikle/RubymineProjects/Cytonic_Backend&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -242,7 +222,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-RM-241.14494.234" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-RM-241.17890.15" />
       </set>
     </attachedChunks>
   </component>
@@ -281,215 +261,21 @@
       <workItem from="1716597676983" duration="5988000" />
       <workItem from="1716628939796" duration="18552000" />
       <workItem from="1716721186512" duration="2417000" />
-      <workItem from="1716747564728" duration="730000" />
-    </task>
-    <task id="LOCAL-00001" summary="Misc stuff">
-      <option name="closed" value="true" />
-      <created>1711903096116</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1711903096116</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Add roles">
-      <option name="closed" value="true" />
-      <created>1711903111740</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1711903111740</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Add MC link">
-      <option name="closed" value="true" />
-      <created>1711903123094</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1711903123094</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Roles controller">
-      <option name="closed" value="true" />
-      <created>1711903133887</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1711903133887</updated>
-    </task>
-    <task id="LOCAL-00005" summary="more stuff">
-      <option name="closed" value="true" />
-      <created>1711903172051</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1711903172051</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Remove debug message">
-      <option name="closed" value="true" />
-      <created>1711903189851</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1711903189851</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Add controller for managing users">
-      <option name="closed" value="true" />
-      <created>1711903209221</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1711903209221</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Add role to the user serializer">
-      <option name="closed" value="true" />
-      <created>1711903218909</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1711903218909</updated>
-    </task>
-    <task id="LOCAL-00009" summary="something?">
-      <option name="closed" value="true" />
-      <created>1711903231203</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1711903231203</updated>
-    </task>
-    <task id="LOCAL-00010" summary="migrations stuff">
-      <option name="closed" value="true" />
-      <created>1711903249404</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1711903249404</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Add stuff for new controllers">
-      <option name="closed" value="true" />
-      <created>1711903259771</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1711903259771</updated>
-    </task>
-    <task id="LOCAL-00012" summary="cleanup">
-      <option name="closed" value="true" />
-      <created>1713643140343</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1713643140343</updated>
-    </task>
-    <task id="LOCAL-00013" summary="cleanup">
-      <option name="closed" value="true" />
-      <created>1713643143933</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1713643143933</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Update schema">
-      <option name="closed" value="true" />
-      <created>1713643160687</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1713643160687</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Added user termination and restoration">
-      <option name="closed" value="true" />
-      <created>1713643188783</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1713643188783</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Serialize the user avatar aswell">
-      <option name="closed" value="true" />
-      <created>1713643200740</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1713643200740</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Add active storage">
-      <option name="closed" value="true" />
-      <created>1713643212495</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1713643212495</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Update credentails">
-      <option name="closed" value="true" />
-      <created>1713643222106</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1713643222106</updated>
-    </task>
-    <task id="LOCAL-00019" summary="make databases production ready">
-      <option name="closed" value="true" />
-      <created>1713643240346</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1713643240346</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Update mail settings">
-      <option name="closed" value="true" />
-      <created>1713643270573</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1713643270573</updated>
-    </task>
-    <task id="LOCAL-00021" summary="begin working on reports">
-      <option name="closed" value="true" />
-      <created>1713643283084</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1713643283084</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Role fixes">
-      <option name="closed" value="true" />
-      <created>1713643298605</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1713643298605</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Add routes for new features">
-      <option name="closed" value="true" />
-      <created>1713643309942</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1713643309942</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Terminations, fix errors">
-      <option name="closed" value="true" />
-      <created>1713643324101</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1713643324101</updated>
-    </task>
-    <task id="LOCAL-00025" summary="very early in development reports">
-      <option name="closed" value="true" />
-      <created>1713643341155</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1713643341155</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Avatar controllering">
-      <option name="closed" value="true" />
-      <created>1713643356525</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1713643356525</updated>
+      <workItem from="1716747564728" duration="4912000" />
+      <workItem from="1716767594781" duration="3031000" />
+      <workItem from="1716809813426" duration="629000" />
+      <workItem from="1717534162272" duration="2721000" />
+      <workItem from="1718401765093" duration="324000" />
+      <workItem from="1718402252809" duration="1901000" />
+      <workItem from="1719243625004" duration="9791000" />
+      <workItem from="1719257326573" duration="1351000" />
+      <workItem from="1719838848658" duration="7157000" />
+      <workItem from="1720028379503" duration="237000" />
+      <workItem from="1720451589520" duration="779000" />
+      <workItem from="1720697558708" duration="11000" />
+      <workItem from="1721040615963" duration="5550000" />
+      <workItem from="1721335900694" duration="4145000" />
+      <workItem from="1721387013812" duration="7304000" />
     </task>
     <task id="LOCAL-00027" summary="Avatar controllering">
       <option name="closed" value="true" />
@@ -555,7 +341,335 @@
       <option name="project" value="LOCAL" />
       <updated>1716748626640</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Fix origins for CORS">
+      <option name="closed" value="true" />
+      <created>1716748687637</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1716748687637</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Increate token expiry to 24 hours">
+      <option name="closed" value="true" />
+      <created>1716748702378</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1716748702378</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Update schema for forums">
+      <option name="closed" value="true" />
+      <created>1716748719092</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1716748719092</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Create categories controller">
+      <option name="closed" value="true" />
+      <created>1716748749916</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1716748749916</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Create categories">
+      <option name="closed" value="true" />
+      <created>1716748762816</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1716748762816</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Create Topics">
+      <option name="closed" value="true" />
+      <created>1716748775050</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1716748775050</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Stuff ig">
+      <option name="closed" value="true" />
+      <created>1716748789680</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1716748789680</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Create controller for topics">
+      <option name="closed" value="true" />
+      <created>1716748818204</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1716748818204</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Update user to have many threads and comments. Add util method to see if user can moderate">
+      <option name="closed" value="true" />
+      <created>1716748869556</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1716748869556</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Update user serializer to include mute data">
+      <option name="closed" value="true" />
+      <created>1716748888782</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1716748888782</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Remove redundant comparison">
+      <option name="closed" value="true" />
+      <created>1716748915949</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1716748915949</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Create impl class for topic and category">
+      <option name="closed" value="true" />
+      <created>1716748931478</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1716748931478</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Create serializers for forums stuff">
+      <option name="closed" value="true" />
+      <created>1716748988105</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1716748988105</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Create models for forums">
+      <option name="closed" value="true" />
+      <created>1716749010943</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1716749010943</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Create util method for moderation">
+      <option name="closed" value="true" />
+      <created>1716749027819</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1716749027819</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Add new routes">
+      <option name="closed" value="true" />
+      <created>1716749042118</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1716749042119</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Create different user serializer for public view">
+      <option name="closed" value="true" />
+      <created>1716749075468</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1716749075468</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Force json responses">
+      <option name="closed" value="true" />
+      <created>1716749103120</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1716749103120</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Saftey checks">
+      <option name="closed" value="true" />
+      <created>1716749154194</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1716749154194</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Create controller to handle threads">
+      <option name="closed" value="true" />
+      <created>1716749390142</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1716749390142</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Create controllers to handle reporting forums content">
+      <option name="closed" value="true" />
+      <created>1716749545041</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1716749545041</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Create a controller that handles locking of threads">
+      <option name="closed" value="true" />
+      <created>1716749607637</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1716749607637</updated>
+    </task>
+    <task id="LOCAL-00057" summary="Create an api endpoint that shows user data">
+      <option name="closed" value="true" />
+      <created>1716749628424</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1716749628424</updated>
+    </task>
+    <task id="LOCAL-00058" summary="Create controller to handle comments">
+      <option name="closed" value="true" />
+      <created>1716749797823</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1716749797823</updated>
+    </task>
+    <task id="LOCAL-00059" summary="Fix routing">
+      <option name="closed" value="true" />
+      <created>1717535515975</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1717535515975</updated>
+    </task>
+    <task id="LOCAL-00060" summary="Remove debug message">
+      <option name="closed" value="true" />
+      <created>1717535525211</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1717535525211</updated>
+    </task>
+    <task id="LOCAL-00061" summary="Fix leaking emails addresses in threads">
+      <option name="closed" value="true" />
+      <created>1717535541299</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1717535541299</updated>
+    </task>
+    <task id="LOCAL-00062" summary="Formatting">
+      <option name="closed" value="true" />
+      <created>1717535558859</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1717535558859</updated>
+    </task>
+    <task id="LOCAL-00063" summary="Use a serializer instead">
+      <option name="closed" value="true" />
+      <created>1717535568050</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1717535568050</updated>
+    </task>
+    <task id="LOCAL-00064" summary="More fixes to thread_serializer.rb">
+      <option name="closed" value="true" />
+      <created>1717537101254</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1717537101254</updated>
+    </task>
+    <task id="LOCAL-00065" summary="give more info about deleted comments">
+      <option name="closed" value="true" />
+      <created>1718403717131</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1718403717131</updated>
+    </task>
+    <task id="LOCAL-00066" summary="Don't show deleted threads">
+      <option name="closed" value="true" />
+      <created>1718403854500</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1718403854500</updated>
+    </task>
+    <task id="LOCAL-00067" summary="Create controller for admins to delete avatars">
+      <option name="closed" value="true" />
+      <created>1719252655256</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1719252655256</updated>
+    </task>
+    <task id="LOCAL-00068" summary="New routes">
+      <option name="closed" value="true" />
+      <created>1719252671498</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1719252671498</updated>
+    </task>
+    <task id="LOCAL-00069" summary="add extra attribs">
+      <option name="closed" value="true" />
+      <created>1719252692411</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1719252692411</updated>
+    </task>
+    <task id="LOCAL-00070" summary="Confirm via email">
+      <option name="closed" value="true" />
+      <created>1719252703076</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1719252703076</updated>
+    </task>
+    <task id="LOCAL-00071" summary="nullify avatar URL">
+      <option name="closed" value="true" />
+      <created>1719252716215</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1719252716215</updated>
+    </task>
+    <task id="LOCAL-00072" summary="Create controller to handle password resets">
+      <option name="closed" value="true" />
+      <created>1719845786973</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1719845786973</updated>
+    </task>
+    <task id="LOCAL-00073" summary="Update mail">
+      <option name="closed" value="true" />
+      <created>1719845809616</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1719845809616</updated>
+    </task>
+    <task id="LOCAL-00074" summary="Use the correct url">
+      <option name="closed" value="true" />
+      <created>1719845853238</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1719845853238</updated>
+    </task>
+    <task id="LOCAL-00075" summary="add routes">
+      <option name="closed" value="true" />
+      <created>1719845863871</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1719845863871</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -563,32 +677,32 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add role to the user serializer" />
-    <MESSAGE value="something?" />
-    <MESSAGE value="migrations stuff" />
-    <MESSAGE value="Add stuff for new controllers" />
-    <MESSAGE value="cleanup" />
-    <MESSAGE value="Update schema" />
-    <MESSAGE value="Added user termination and restoration" />
-    <MESSAGE value="Serialize the user avatar aswell" />
-    <MESSAGE value="Add active storage" />
-    <MESSAGE value="Update credentails" />
-    <MESSAGE value="make databases production ready" />
-    <MESSAGE value="Update mail settings" />
-    <MESSAGE value="begin working on reports" />
-    <MESSAGE value="Role fixes" />
-    <MESSAGE value="Add routes for new features" />
-    <MESSAGE value="Terminations, fix errors" />
-    <MESSAGE value="very early in development reports" />
-    <MESSAGE value="Avatar controllering" />
-    <MESSAGE value="Have roles" />
-    <MESSAGE value="workspacing" />
-    <MESSAGE value="Banner controllering" />
-    <MESSAGE value="add new emails" />
-    <MESSAGE value="Fix error with redirects" />
-    <MESSAGE value="Create migrations" />
-    <MESSAGE value="Create controller to handle user mutes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create controller to handle user mutes" />
+    <MESSAGE value="Create different user serializer for public view" />
+    <MESSAGE value="Force json responses" />
+    <MESSAGE value="Saftey checks" />
+    <MESSAGE value="Create controller to handle threads" />
+    <MESSAGE value="Create controllers to handle reporting forums content" />
+    <MESSAGE value="Create a controller that handles locking of threads" />
+    <MESSAGE value="Create an api endpoint that shows user data" />
+    <MESSAGE value="Create controller to handle comments" />
+    <MESSAGE value="Fix routing" />
+    <MESSAGE value="Remove debug message" />
+    <MESSAGE value="Fix leaking emails addresses in threads" />
+    <MESSAGE value="Formatting" />
+    <MESSAGE value="Use a serializer instead" />
+    <MESSAGE value="More fixes to thread_serializer.rb" />
+    <MESSAGE value="give more info about deleted comments" />
+    <MESSAGE value="Don't show deleted threads" />
+    <MESSAGE value="Create controller for admins to delete avatars" />
+    <MESSAGE value="New routes" />
+    <MESSAGE value="add extra attribs" />
+    <MESSAGE value="Confirm via email" />
+    <MESSAGE value="nullify avatar URL" />
+    <MESSAGE value="Create controller to handle password resets" />
+    <MESSAGE value="Update mail" />
+    <MESSAGE value="Use the correct url" />
+    <MESSAGE value="add routes" />
+    <option name="LAST_COMMIT_MESSAGE" value="add routes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -606,6 +720,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Cytonic_Backend@Cytonic_API__PROD_.rcov" NAME="Cytonic API (PROD) Coverage Results" MODIFIED="1714003029562" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Cytonic_Backend" />
-    <SUITE FILE_PATH="coverage/Cytonic_Backend@Cytonic_Backend.rcov" NAME="Cytonic_Backend Coverage Results" MODIFIED="1716747573433" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Cytonic_Backend" />
+    <SUITE FILE_PATH="coverage/Cytonic_Backend@Cytonic_Backend.rcov" NAME="Cytonic_Backend Coverage Results" MODIFIED="1721042181320" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Cytonic_Backend" />
   </component>
 </project>

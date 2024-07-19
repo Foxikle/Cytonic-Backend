@@ -1,14 +1,31 @@
 class ThreadReportSerializer
-  include JSONAPI::Serializer
-  attributes :resolved, :resolved_at, :created_at, :updated_at, :action, :reason, :user
 
-  attribute :thread do |report|
-    ThreadSerializer.new(report.thread).serializable_hash
+  def initialize (report, current_user)
+    @report = report
+    @current_user = current_user
   end
 
-  # has stuff
-  belongs_to :thread, serializer: ThreadSerializer
-  belongs_to :user, class_name: 'User', foreign_key: 'user_id', serializer: SafeUserSerializer, attributes: [:id, :name, :role, :avatar_url] # the user who reported the comment
-  belongs_to :resolving_user, class_name: 'User', foreign_key: 'resolving_user_id', optional: true, serializer: SafeUserSerializer, attributes: [:id, :name, :role, :avatar_url]  # the user who resolved the reported comment
+  def as_json(*)
+    {
+      resolved: @report.resolved,
+      resolved_at: @report.resolved_at,
+      created_at: @report.created_at,
+      updated_at: @report.updated_at,
+      action: @report.action,
+      reason: @report.reason,
+      user: SafeUserSerializer.new(@report.user).serializable_hash,
+      resolving_user: resolving_user,
+      thread: ThreadSerializer.new(@report.thread, @current_user).as_json
+    }
+  end
 
+  private
+
+  def resolving_user
+    if @report.resolved && @report.resolving_user_id.present?
+      SafeUserSerializer.new(User.find(@report.resolving_user_id)).as_json
+    else
+      nil
+    end
+  end
 end

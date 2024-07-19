@@ -3,7 +3,10 @@ class Users::SessionsController < Devise::SessionsController
   respond_to :json
 
   def create
+    puts "Hello!!!"
     self.resource = warden.authenticate!(auth_options)
+    puts "Byeeee!!!"
+
     if User.find(resource.id).terminated
       render json: { message: "This user has been terminated for violating the Term of Service or User Conduct Agreement." }, status: :unauthorized
       User.revoke_jwt(nil, resource)

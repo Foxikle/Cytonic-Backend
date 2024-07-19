@@ -1,5 +1,15 @@
 class SafeUserSerializer
-  include JSONAPI::Serializer
-  # This one just doesn't hand out user emails, which are not really ideal to share
-  attributes :id, :name, :role, :avatar_url
+
+  def initialize(user)
+    @user = user
+  end
+
+  def as_json(*)
+    {
+      id: @user.id,
+      name: @user.name,
+      role: @user.role,
+      avatar_url: @user.avatar_url
+    }
+  end
 end
